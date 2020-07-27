@@ -1,0 +1,52 @@
+Task 1
+a = "I"
+b = "like"
+c = "Python"
+say = '{} {} {}'.format(a, b, c)
+print(say)
+
+Task 2
+print("Приветствую! Данная программа приобразует количество введенных секунд по принципу чч.мм.сс")
+sec_user = int(input("Введите количество секунд"))
+hourse = sec_user // 3600
+minutes = (sec_user - hourse * 3600) // 60
+seconds = sec_user - (hourse * 3600 + minutes * 60)
+print(f"Время {hourse} : {minutes} : {seconds}")
+
+Task 3
+print("Сложение по формуле 'n+nn+nnn' ")
+n = int(input("Введите любую цифру"))
+answer = (n + int(str(n) + str(n)) + int(str(n) + str(n) + str(n)))
+print(answer)
+
+Task 4
+n = int(input("Введите целое число"))
+max = 0
+while n>0:
+    c=n%10
+    if c >=max: max = c
+    n //=10
+print(max)
+
+Task 5
+profit = float(input("Введите выручку фирмы"))
+costs = float(input("Введите издержки фирмы"))
+if profit > costs:
+    print(f"Чистая прибыль составила {profit - costs:.2f}")
+    workers = int(input("Введите количество сотрудников в фирме "))
+    print(f"Прибыль в расчете на одного сотрудника составялет {profit / workers:.2f}")
+elif profit == costs:
+    print("Фирма работает в ноль")
+else:
+    print("Фирма работает в убыток")
+
+Task 6
+a = int(input("Ваш результат в км?"))
+b = int(input("Ваш желаемый результат?"))
+days = 1
+km = a
+while km < b:
+    a = a + 0.1 * a
+    days += 1
+    km = km + a
+print(f"Вы достигните желаемого результата на %.d день" %days)
